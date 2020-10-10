@@ -9,13 +9,6 @@ GraphNode::GraphNode(int id)
 
 GraphNode::~GraphNode()
 {
-    //// STUDENT CODE
-    ////
-
-    //delete _chatBot; 
-
-    ////
-    //// EOF STUDENT CODE
 }
 
 void GraphNode::AddToken(std::string token)
@@ -33,8 +26,6 @@ void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
     _childEdges.push_back(std::make_unique<GraphEdge>(*edge));
 }
 
-//// STUDENT CODE
-////
 void GraphNode::MoveChatbotHere(ChatBot chatbot)
 {
     std::cout << "Move the ownership" << std::endl;
@@ -46,16 +37,10 @@ void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 {
     newNode->MoveChatbotHere(std::move(_chatBot));
 }
-////
-//// EOF STUDENT CODE
 
 GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
 {
-    //// STUDENT CODE
-    ////
 
     return _childEdges[index].get();
 
-    ////
-    //// EOF STUDENT CODE
 }

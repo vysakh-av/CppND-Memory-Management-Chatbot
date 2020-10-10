@@ -27,8 +27,6 @@ public:
     ChatBot(std::string filename); // constructor WITH memory allocation
     ~ChatBot();
 
-    //// STUDENT CODE
-    ////
     /* Copy constructor. */
     ChatBot(const ChatBot &);
 
@@ -41,9 +39,6 @@ public:
     /* Move Overload assignment */
     ChatBot& operator=(ChatBot &&);
     
-    ////
-    //// EOF STUDENT CODE
-
     // getters / setters
     void SetCurrentNode(GraphNode *node);
     void SetRootNode(GraphNode *rootNode) { _rootNode = rootNode; }
